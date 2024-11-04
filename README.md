@@ -10,3 +10,6 @@ calc-game
 
 GCD-game
 <a href="https://asciinema.org/a/XsBArP1uWsVPVsAY5pYbHch1Q" target="_blank"><img src="https://asciinema.org/a/XsBArP1uWsVPVsAY5pYbHch1Q.svg" /></a>
+
+Progression
+<a href="https://asciinema.org/a/vA7Jd16aSv9e7u62J6P8abXHL" target="_blank"><img src="https://asciinema.org/a/vA7Jd16aSv9e7u62J6P8abXHL.svg" /></a>
