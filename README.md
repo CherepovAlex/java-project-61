@@ -6,4 +6,4 @@ even-game
 <a href="https://asciinema.org/a/MJCfz9m9LyO8g4focg7BcGqIj" target="_blank"><img src="https://asciinema.org/a/MJCfz9m9LyO8g4focg7BcGqIj.svg" /></a>
 
 calc-game
-<script src="https://asciinema.org/a/3C7xMn7McFsQsiNKwTXcPEF6V.js" id="asciicast-3C7xMn7McFsQsiNKwTXcPEF6V" async="true"></script>
+<a href="https://asciinema.org/a/3C7xMn7McFsQsiNKwTXcPEF6V" target="_blank"><img src="https://asciinema.org/a/3C7xMn7McFsQsiNKwTXcPEF6V.svg" /></a>
