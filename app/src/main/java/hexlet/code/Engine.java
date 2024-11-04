@@ -4,16 +4,17 @@ import java.util.Scanner;
 
 public class Engine {
 
+    public static final int ROUNDS = 3;
+
     public static void run(String[][] rounds, String rules) {
 
         int counterCorrect = 0;
 
         for (String[] round : rounds) {
-            //Scanner scanner = new Scanner(System.in);
             //запрашиваем вопрос
+            Scanner scanner = new Scanner(System.in);
             System.out.println("Question: " + round[0]);
             System.out.print("Your answer: ");
-            Scanner scanner = new Scanner(System.in);
             String answerUser = scanner.next();
 
             //выводим ответ
@@ -27,9 +28,10 @@ public class Engine {
         }
 
         //вывод поздравления
-        if (counterCorrect == 3) {
+        if (counterCorrect == Engine.ROUNDS) {
             System.out.println("Congratulations,  " + Cli.getUserName() + "!");
         }
 
     }
 }
+

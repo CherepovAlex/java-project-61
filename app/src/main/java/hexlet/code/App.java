@@ -2,6 +2,7 @@ package hexlet.code;
 
 import hexlet.code.games.Calc;
 import hexlet.code.games.Even;
+import hexlet.code.games.GCD;
 
 import java.util.Scanner;
 
@@ -28,10 +29,13 @@ public class App {
             case 0:
                 break;
             case 2:
-                Even.gameEven();
+                Even.game();
                 break;
             case 3:
-                Calc.gameMath();
+                Calc.game();
+                break;
+            case 4:
+                GCD.game();
                 break;
             default:
                 break;
