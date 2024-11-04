@@ -2,7 +2,6 @@ package hexlet.code.games;
 
 import hexlet.code.Engine;
 
-import java.util.Arrays;
 import java.util.Random;
 
 public class Progression {
@@ -23,7 +22,7 @@ public class Progression {
         var startProrg = new Random().nextInt(1, 100);
         var hidIndex = new Random().nextInt(1, 10);
 
-        String progression[] = generateProgression(startProrg, stepProgr, count);
+        String[] progression = generateProgression(startProrg, stepProgr, count);
         var answer = progression[hidIndex];
         progression[hidIndex] = "..";
         String question = String.join(" ", progression);
