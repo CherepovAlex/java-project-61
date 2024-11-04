@@ -22,28 +22,33 @@ public class App {
         System.out.println("0 - Exit");
         System.out.print("Your choice: ");
         int choiceGame = game.nextInt();
-        Cli.helloMethod();
         System.out.println();
         switch (choiceGame) {
+            case 0:
+                break;
             case 1:
                 Cli.helloMethod();
                 break;
             case 2:
+                Cli.helloMethod();
                 Even.game();
                 break;
             case 3:
+                Cli.helloMethod();
                 Calc.game();
                 break;
             case 4:
+                Cli.helloMethod();
                 GCD.game();
                 break;
             case 5:
+                Cli.helloMethod();
                 Progression.game();
                 break;
             case 6:
+                Cli.helloMethod();
                 Prime.game();
                 break;
-            case 0:
             default:
                 break;
         }
