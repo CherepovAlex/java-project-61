@@ -1,2 +1,2 @@
-run_dist:
+run-dist:
 	./build/install/app/bin/app
