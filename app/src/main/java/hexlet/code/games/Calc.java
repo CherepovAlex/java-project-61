@@ -22,7 +22,7 @@ public class Calc {
     //генерация одного раунда
     private static String[] generateRound() {
         var number = 0;
-        String question = "";
+        StringBuilder question = new StringBuilder();
         //генерируем числа
         var number1 = new Random().nextInt(1, 100);
         var number2 = new Random().nextInt(1, 100);
@@ -30,9 +30,9 @@ public class Calc {
         var sign = new char[]{'+', '-', '*'};
         for (int i = 0; i < Engine.ROUNDS; i++) {
             number = calculate(number1, number2, sign[i]);
-            question += number1 + " " + sign[i] + " " + number2;
+            question.append(number1).append(" ").append(sign[i]).append(" ").append(number2);
         }
-        return new String[]{question, Integer.toString(number)};
+        return new String[]{question.toString(), Integer.toString(number)};
     }
 
     public static int calculate(int number1, int number2, char symbol) {
