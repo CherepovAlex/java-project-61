@@ -13,3 +13,6 @@ GCD-game
 
 Progression
 <a href="https://asciinema.org/a/vA7Jd16aSv9e7u62J6P8abXHL" target="_blank"><img src="https://asciinema.org/a/vA7Jd16aSv9e7u62J6P8abXHL.svg" /></a>
+
+Prime
+<a href="https://asciinema.org/a/luSVNag7DXeJVfN1L4tCfQzqs" target="_blank"><img src="https://asciinema.org/a/luSVNag7DXeJVfN1L4tCfQzqs.svg" /></a>
