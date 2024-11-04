@@ -7,3 +7,6 @@ even-game
 
 calc-game
 <a href="https://asciinema.org/a/3C7xMn7McFsQsiNKwTXcPEF6V" target="_blank"><img src="https://asciinema.org/a/3C7xMn7McFsQsiNKwTXcPEF6V.svg" /></a>
+
+GCD-game
+<a href="https://asciinema.org/a/XsBArP1uWsVPVsAY5pYbHch1Q" target="_blank"><img src="https://asciinema.org/a/XsBArP1uWsVPVsAY5pYbHch1Q.svg" /></a>
