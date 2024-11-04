@@ -19,7 +19,6 @@ public class App {
         System.out.print("Your choice: ");
         int choiceGame = game.nextInt();
         System.out.println();
-        Cli.helloMethod();
         switch (choiceGame) {
             case 1:
                 Cli.helloMethod();
