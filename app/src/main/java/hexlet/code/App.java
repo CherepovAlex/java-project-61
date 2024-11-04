@@ -1,9 +1,6 @@
 package hexlet.code;
 
-import hexlet.code.games.Calc;
-import hexlet.code.games.Even;
-import hexlet.code.games.GCD;
-import hexlet.code.games.Progression;
+import hexlet.code.games.*;
 
 import java.util.Scanner;
 
@@ -40,6 +37,9 @@ public class App {
                 break;
             case 5:
                 Progression.game();
+                break;
+            case 6:
+                Prime.game();
                 break;
             default:
                 break;
