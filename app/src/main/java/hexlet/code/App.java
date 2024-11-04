@@ -1,5 +1,8 @@
 package hexlet.code;
 
+import hexlet.code.games.Calc;
+import hexlet.code.games.Even;
+
 import java.util.Scanner;
 
 public class App {
@@ -22,10 +25,13 @@ public class App {
             case 1:
                 Cli.helloMethod();
                 break;
-            case 2:
-                Even.isEven();
-                break;
             case 0:
+                break;
+            case 2:
+                Even.gameEven();
+                break;
+            case 3:
+                Calc.gameMath();
                 break;
             default:
                 break;
