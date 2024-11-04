@@ -24,7 +24,7 @@ public class Engine {
             }
         }
         if (counterCorrect == Engine.ROUNDS) {
-            System.out.println("Congratulations,  " + Cli.getUserName() + "!");
+            System.out.println("Congratulations, " + Cli.getUserName() + "!");
         }
     }
 }
