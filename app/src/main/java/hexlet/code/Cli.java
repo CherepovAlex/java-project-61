@@ -9,15 +9,19 @@ public class Cli {
         this.userName = userName;
     }
 
+    public static void setUserName(String userName) {
+        Cli.userName = userName;
+    }
+
     public static void helloMethod() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Welcome to the Brain Games!");
         System.out.print("May I have your name? ");
-        Cli userName = new Cli((String)scanner.next());
+        setUserName(new String(scanner.next()));
         System.out.println("Hello, " + Cli.getUserName());
     }
 
-    public static String getUserName(){
+    public static String getUserName() {
         return userName;
     }
 
