@@ -6,7 +6,7 @@ public class Engine {
 
     public static final int ROUNDS = 3;
 
-    public static void run(String[][] rounds, String rules) {
+    public static void run(String[][] rounds) {
 
         int counterCorrect = 0;
 

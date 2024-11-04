@@ -12,7 +12,7 @@ public class Even {
         for (int i = 0; i < Engine.ROUNDS; i++) {
             questions[i] = generateRound();
         }
-        Engine.run(questions, "Правила игры");
+        Engine.run(questions);
     }
 
     private static String[] generateRound() {

@@ -16,7 +16,7 @@ public class Calc {
             questions[i] = generateRound();
         }
         //запускаем вопросы
-        Engine.run(questions, "Правила игры");
+        Engine.run(questions);
     }
 
     //генерация одного раунда
