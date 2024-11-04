@@ -24,8 +24,6 @@ public class App {
             case 1:
                 Cli.helloMethod();
                 break;
-            case 0:
-                break;
             case 2:
                 Even.game();
                 break;
@@ -41,6 +39,7 @@ public class App {
             case 6:
                 Prime.game();
                 break;
+            case 0:
             default:
                 break;
         }
