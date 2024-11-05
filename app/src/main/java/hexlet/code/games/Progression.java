@@ -7,6 +7,7 @@ import java.util.Random;
 public class Progression {
     public static final int LIMIT1 = 100;
     public static final int LIMIT2 = 10;
+    public static final int LENGHT = 10;
 
     public static void game() {
         System.out.println("What number is missing in the progression?");
@@ -19,7 +20,7 @@ public class Progression {
 
     private static String[] generateRound() {
 
-        int count = 10;
+        int count = LENGHT;
         var stepProgr = new Random().nextInt(1, LIMIT2);
         var startProrg = new Random().nextInt(1, LIMIT1);
         var hidIndex = new Random().nextInt(1, LIMIT2);
