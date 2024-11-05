@@ -28,7 +28,7 @@ public class Calc {
         var number1 = new Random().nextInt(1, 100);
         var number2 = new Random().nextInt(1, 100);
         //генерируем операции
-        question = new StringBuilder("");
+        question = new StringBuilder();
         number = calculate(number1, number2, sign);
         question.append(number1).append(" ").append(sign).append(" ").append(number2);
         return new String[]{question.toString(), Integer.toString(number)};
