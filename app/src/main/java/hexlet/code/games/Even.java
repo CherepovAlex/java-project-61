@@ -24,6 +24,10 @@ public class Even {
     }
 
     private static boolean isEven(int number) {
-        return number % 2 == 0;
+        if (number != 1) {
+            return number % 2 == 0;
+        } else {
+            return false;
+        }
     }
 }
