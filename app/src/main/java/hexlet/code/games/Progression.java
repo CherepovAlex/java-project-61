@@ -20,12 +20,12 @@ public class Progression {
 
     private static String[] generateRound() {
 
-        int count = LENGHT;
+
         var stepProgr = new Random().nextInt(1, LIMIT2);
         var startProrg = new Random().nextInt(1, LIMIT1);
         var hidIndex = new Random().nextInt(1, LIMIT2);
 
-        String[] progression = generateProgression(startProrg, stepProgr, count);
+        String[] progression = generateProgression(startProrg, stepProgr, LENGHT);
         var answer = progression[hidIndex];
         progression[hidIndex] = "..";
         String question = String.join(" ", progression);
