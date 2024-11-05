@@ -26,7 +26,7 @@ public class GCD {
 
     private static int gcd(int number1, int number2) {
         int min = Math.min(number1, number2);
-        for (int i = min - 1; i >= 1; i--) {
+        for (int i = min; i >= 1; i--) {
             if ((number1 % i == 0) && (number2 % i == 0)) {
                 return i;
             }
