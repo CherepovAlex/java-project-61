@@ -32,14 +32,14 @@ public class Progression {
         return new String[]{question, String.valueOf(answer)};
     }
 
-    private static String[] generateProgression(int startProrg, int stepProgr, int count) {
-        int[] progr = new int[count];
+    private static String[] generateProgression(int startProrg, int stepProgr, int lenght) {
+        int[] progr = new int[lenght];
         progr[0] = startProrg;
-        String[] progr1 = new String[count];
-        for (int i = 1; i < count; i++) {
+        String[] progr1 = new String[lenght];
+        for (int i = 1; i < lenght; i++) {
             progr[i] = progr[i - 1] + stepProgr;
         }
-        for (int i = 0; i < count; i++) {
+        for (int i = 0; i < lenght; i++) {
             progr1[i] = String.valueOf(progr[i]);
         }
         return progr1;
