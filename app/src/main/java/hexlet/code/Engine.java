@@ -21,7 +21,7 @@ public class Engine {
             } else {
                 System.out.println("'" + answerUser + "'" + " is wrong answer ;(. Correct answer was " + "'"
                         + round[1] + "'");
-                System.out.println("Let's try again, " + Cli.getUserName());
+                System.out.println("Let's try again, " + Cli.getUserName() + "!");
             }
         }
         if (counterCorrect == Engine.ROUNDS) {

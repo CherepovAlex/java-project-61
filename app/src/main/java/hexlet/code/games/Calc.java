@@ -23,7 +23,7 @@ public class Calc {
     //генерация одного раунда
     private static String[] generateRound(char sign) {
         var number = 0;
-        StringBuilder question = new StringBuilder();
+        StringBuilder question;
         //генерируем числа
         var number1 = new Random().nextInt(1, 100);
         var number2 = new Random().nextInt(1, 100);
