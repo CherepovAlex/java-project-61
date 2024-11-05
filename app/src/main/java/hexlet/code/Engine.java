@@ -8,8 +8,6 @@ public class Engine {
 
     public static void run(String[][] rounds) {
 
-        int counterCorrect = 0;
-
         for (String[] round : rounds) {
             Scanner scanner = new Scanner(System.in);
             System.out.println("Question: " + round[0]);
@@ -17,7 +15,6 @@ public class Engine {
             String answerUser = scanner.next();
             if (answerUser.equals(round[1])) {
                 System.out.println("Correct!");
-                counterCorrect++;
             } else {
                 System.out.println("'" + answerUser + "'" + " is wrong answer ;(. Correct answer was " + "'"
                         + round[1] + "'");
