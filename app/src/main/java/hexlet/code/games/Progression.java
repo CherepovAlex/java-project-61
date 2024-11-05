@@ -20,7 +20,6 @@ public class Progression {
 
     private static String[] generateRound() {
 
-
         var stepProgr = new Random().nextInt(1, LIMIT2);
         var startProrg = new Random().nextInt(1, LIMIT1);
         var hidIndex = new Random().nextInt(1, LIMIT2);
