@@ -24,21 +24,21 @@ public class Progression {
         var startProrg = new Random().nextInt(1, LIMIT1);
         var hidIndex = new Random().nextInt(1, LIMIT2);
 
-        String[] progression = generateProgression(startProrg, stepProgr, LENGHT);
+        String[] progression = generateProgression(startProrg, stepProgr);
         var answer = progression[hidIndex];
         progression[hidIndex] = "..";
         String question = String.join(" ", progression);
         return new String[]{question, String.valueOf(answer)};
     }
 
-    private static String[] generateProgression(int startProrg, int stepProgr, int lenght) {
-        int[] progr = new int[lenght];
+    private static String[] generateProgression(int startProrg, int stepProgr) {
+        int[] progr = new int[LENGHT];
         progr[0] = startProrg;
-        String[] progr1 = new String[lenght];
-        for (int i = 1; i < lenght; i++) {
+        String[] progr1 = new String[LENGHT];
+        for (int i = 1; i < LENGHT; i++) {
             progr[i] = progr[i - 1] + stepProgr;
         }
-        for (int i = 0; i < lenght; i++) {
+        for (int i = 0; i < LENGHT; i++) {
             progr1[i] = String.valueOf(progr[i]);
         }
         return progr1;
