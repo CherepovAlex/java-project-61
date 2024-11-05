@@ -6,6 +6,8 @@ import java.util.Random;
 
 public class Calc {
 
+    public static final int LIMIT = 100;
+
     public static void game() {
         //задавание вопроса
         System.out.println("What is the result of the expression?");
@@ -25,8 +27,8 @@ public class Calc {
         var number = 0;
         StringBuilder question;
         //генерируем числа
-        var number1 = new Random().nextInt(1, 100);
-        var number2 = new Random().nextInt(1, 100);
+        var number1 = new Random().nextInt(1, LIMIT);
+        var number2 = new Random().nextInt(1, LIMIT);
         //генерируем операции
         question = new StringBuilder();
         number = calculate(number1, number2, sign);

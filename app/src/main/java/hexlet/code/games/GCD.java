@@ -6,6 +6,8 @@ import java.util.Random;
 
 public class GCD {
 
+    public static final int LIMIT = 100;
+
     public static void game() {
         System.out.println("Find the greatest common divisor of given numbers.");
         var questions = new String[Engine.ROUNDS][];
@@ -16,8 +18,8 @@ public class GCD {
     }
 
     private static String[] generateRound() {
-        var number1 = new Random().nextInt(1, 100);
-        var number2 = new Random().nextInt(1, 100);
+        var number1 = new Random().nextInt(1, LIMIT);
+        var number2 = new Random().nextInt(1, LIMIT);
         var correctAnswer = gcd(number1, number2);
         return new String[]{number1 + " " + number2, String.valueOf(correctAnswer)};
     }

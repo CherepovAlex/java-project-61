@@ -5,6 +5,8 @@ import hexlet.code.Engine;
 import java.util.Random;
 
 public class Progression {
+    public static final int LIMIT1 = 100;
+    public static final int LIMIT2 = 10;
 
     public static void game() {
         System.out.println("What number is missing in the progression?");
@@ -18,9 +20,9 @@ public class Progression {
     private static String[] generateRound() {
 
         int count = 10;
-        var stepProgr = new Random().nextInt(1, 10);
-        var startProrg = new Random().nextInt(1, 100);
-        var hidIndex = new Random().nextInt(1, 10);
+        var stepProgr = new Random().nextInt(1, LIMIT2);
+        var startProrg = new Random().nextInt(1, LIMIT1);
+        var hidIndex = new Random().nextInt(1, LIMIT2);
 
         String[] progression = generateProgression(startProrg, stepProgr, count);
         var answer = progression[hidIndex];

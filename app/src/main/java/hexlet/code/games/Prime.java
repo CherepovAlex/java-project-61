@@ -6,6 +6,8 @@ import java.util.Random;
 
 public class Prime {
 
+    public static final int LIMIT = 100;
+
     public static void game() {
         System.out.println("Answer 'yes' if given number is prime. Otherwise answer 'no'.");
         var questions = new String[Engine.ROUNDS][];
@@ -16,7 +18,7 @@ public class Prime {
     }
 
     private static String[] generateRound() {
-        var number = new Random().nextInt(1, 100);
+        var number = new Random().nextInt(1, LIMIT);
         var correctAnswer = isPrime(number) ? "yes" : "no";
         return new String[]{String.valueOf(number), correctAnswer};
     }
