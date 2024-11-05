@@ -13,25 +13,24 @@ public class Calc {
         var questions = new String[Engine.ROUNDS][];
         for (int i = 0; i < Engine.ROUNDS; i++) {
             //формируем пару вопрос и ответ
-            questions[i] = generateRound();
+            var sign = new char[]{'+', '-', '*'};
+            questions[i] = generateRound(sign[i]);
         }
         //запускаем вопросы
         Engine.run(questions);
     }
 
     //генерация одного раунда
-    private static String[] generateRound() {
+    private static String[] generateRound(char sign) {
         var number = 0;
         StringBuilder question = new StringBuilder();
         //генерируем числа
         var number1 = new Random().nextInt(1, 100);
         var number2 = new Random().nextInt(1, 100);
         //генерируем операции
-        var sign = new char[]{'+', '-', '*'};
-        for (int i = 0; i < Engine.ROUNDS; i++) {
-            number = calculate(number1, number2, sign[i]);
-            question.append(number1).append(" ").append(sign[i]).append(" ").append(number2);
-        }
+        question = new StringBuilder(" ");
+        number = calculate(number1, number2, sign);
+        question.append(number1).append(" ").append(sign).append(" ").append(number2);
         return new String[]{question.toString(), Integer.toString(number)};
     }
 
