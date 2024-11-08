@@ -2,19 +2,16 @@ package hexlet.code.games;
 
 import hexlet.code.Engine;
 
-import java.util.Random;
-
 public class Prime {
 
     public static final int LIMIT = 100;
 
     public static void game() {
-        System.out.println("Answer 'yes' if given number is prime. Otherwise answer 'no'.");
         var questions = new String[Engine.ROUNDS][];
         for (int i = 0; i < Engine.ROUNDS; i++) {
             questions[i] = generateRound();
         }
-        Engine.run(questions);
+        Engine.run(questions, "Answer 'yes' if given number is prime. Otherwise answer 'no'.");
     }
 
     private static String[] generateRound() {
