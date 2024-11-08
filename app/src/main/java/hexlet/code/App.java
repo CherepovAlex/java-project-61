@@ -10,7 +10,6 @@ import java.util.Scanner;
 
 public class App {
     public static void main(String[] args) {
-
         Scanner scanner = new Scanner(System.in);
         System.out.println("Please enter the game number and press Enter.");
         System.out.println("1 - Greet");
@@ -30,23 +29,18 @@ public class App {
                 Cli.helloMethod();
                 break;
             case "2":
-                Cli.helloMethod();
                 Even.game();
                 break;
             case "3":
-                Cli.helloMethod();
                 Calc.game();
                 break;
             case "4":
-                Cli.helloMethod();
                 GCD.game();
                 break;
             case "5":
-                Cli.helloMethod();
                 Progression.game();
                 break;
             case "6":
-                Cli.helloMethod();
                 Prime.game();
                 break;
             default:

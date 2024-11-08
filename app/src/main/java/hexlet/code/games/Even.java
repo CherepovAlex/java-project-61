@@ -2,23 +2,20 @@ package hexlet.code.games;
 
 import hexlet.code.Engine;
 
-import java.util.Random;
-
 public class Even {
 
     public static final int LIMIT = 100;
 
     public static void game() {
-        System.out.println("Answer 'yes' if the number is even, otherwise answer 'no'.");
         var questions = new String[Engine.ROUNDS][];
         for (int i = 0; i < Engine.ROUNDS; i++) {
             questions[i] = generateRound();
         }
-        Engine.run(questions);
+        Engine.run(questions, "Answer 'yes' if the number is even, otherwise answer 'no'.");
     }
 
     private static String[] generateRound() {
-        var number = new Random().nextInt(1, LIMIT);
+        var number = Utils.generateNumber(1, LIMIT);
         var correctAnswer = isEven(number) ? "yes" : "no";
         return new String[]{String.valueOf(number), correctAnswer};
     }

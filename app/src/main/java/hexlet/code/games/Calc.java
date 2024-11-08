@@ -7,33 +7,25 @@ import java.util.Random;
 public class Calc {
 
     public static final int LIMIT = 100;
+    private static final char[] SIGNS = {'+', '-', '*'};
+    static int n = SIGNS.length;
 
     public static void game() {
-        //задавание вопроса
-        System.out.println("What is the result of the expression?");
-        //массив пар вопрос и ответ
         var questions = new String[Engine.ROUNDS][];
         for (int i = 0; i < Engine.ROUNDS; i++) {
-            //формируем пару вопрос и ответ
-            var sign = new char[]{'+', '-', '*'};
-            questions[i] = generateRound(sign[i]);
+            char sign = (char) new Random().nextInt(0, n);
+            questions[i] = generateRound(SIGNS[sign]);
         }
-        //запускаем вопросы
-        Engine.run(questions);
+        Engine.run(questions, "What is the result of the expression?");
     }
 
-    //генерация одного раунда
     private static String[] generateRound(char sign) {
         var number = 0;
-        StringBuilder question;
-        //генерируем числа
-        var number1 = new Random().nextInt(1, LIMIT);
-        var number2 = new Random().nextInt(1, LIMIT);
-        //генерируем операции
-        question = new StringBuilder();
+        var number1 = Utils.generateNumber(1, LIMIT);
+        var number2 = Utils.generateNumber(1, LIMIT);
         number = calculate(number1, number2, sign);
-        question.append(number1).append(" ").append(sign).append(" ").append(number2);
-        return new String[]{question.toString(), Integer.toString(number)};
+        String question = number1 + " " + sign + " " + number2;
+        return new String[]{question, Integer.toString(number)};
     }
 
     public static int calculate(int number1, int number2, char symbol) {
@@ -44,6 +36,11 @@ public class Calc {
             default -> throw new RuntimeException("unknown operation");
         };
     }
+}
 
+class Utils{
+    public static int generateNumber(int startNumber, int endNumber){
+        return new Random().nextInt(startNumber, endNumber);
+    }
 }
 
