@@ -5,7 +5,7 @@ import hexlet.code.Engine;
 public class Progression {
     public static final int LIMIT1 = 100;
     public static final int LIMIT2 = 10;
-    public static final int LENGHT = 10;
+    public static final int CAPACITY = 10;
 
     public static void game() {
         var questions = new String[Engine.ROUNDS][];
@@ -17,28 +17,27 @@ public class Progression {
 
     private static String[] generateRound() {
 
-        var stepProgr = Utils.generateNumber(1, LIMIT2);
-        var startProrg = Utils.generateNumber(1, LIMIT1);
-        var hidIndex = Utils.generateNumber(1, LIMIT2);
+        var stepProgression = Utils.generateNumber(1, LIMIT2);
+        var startProgression = Utils.generateNumber(1, LIMIT1);
+        var hiddenIndex = Utils.generateNumber(1, LIMIT2);
 
-        String[] progression = generateProgression(startProrg, stepProgr);
-        var answer = progression[hidIndex];
-        progression[hidIndex] = "..";
+        String[] progression = generateProgression(startProgression, stepProgression);
+        var answer = progression[hiddenIndex];
+        progression[hiddenIndex] = "..";
         String question = String.join(" ", progression);
         return new String[]{question, String.valueOf(answer)};
     }
 
-    private static String[] generateProgression(int startProrgression, int stepProgression) {
-        int[] progr = new int[LENGHT];
-        progr[0] = startProrgression;
-        String[] progr1 = new String[LENGHT];
-        for (int i = 1; i < LENGHT; i++) {
-            progr[i] = progr[i - 1] + stepProgression;
+    private static String[] generateProgression(int startProgression, int stepProgression) {
+        int[] progression = new int[CAPACITY];
+        progression[0] = startProgression;
+        String[] stringProgression = new String[CAPACITY];
+        stringProgression[0] = String.valueOf(startProgression);
+        for (int i = 1; i < CAPACITY; i++) {
+            progression[i] = startProgression + i * stepProgression;
+            stringProgression[i] = String.valueOf(progression[i]);
         }
-        for (int i = 0; i < LENGHT; i++) {
-            progr1[i] = String.valueOf(progr[i]);
-        }
-        return progr1;
+        return stringProgression;
     }
 
 }
