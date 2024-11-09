@@ -13,7 +13,7 @@ public class Calc {
         int capOperations = SIGNS.length;
         var questions = new String[Engine.ROUNDS][];
         for (int i = 0; i < Engine.ROUNDS; i++) {
-            char sign = (char) Utils.generateNumber(1, capOperations);
+            char sign = (char) Utils.generateNumber(0, capOperations);
             questions[i] = generateRound(SIGNS[sign]);
         }
         Engine.run(questions, "What is the result of the expression?");
