@@ -8,12 +8,12 @@ public class Calc {
 
     public static final int LIMIT = 100;
     private static final char[] SIGNS = {'+', '-', '*'};
-    static int n = SIGNS.length;
+    private static final int setOperation = SIGNS.length;
 
     public static void game() {
         var questions = new String[Engine.ROUNDS][];
         for (int i = 0; i < Engine.ROUNDS; i++) {
-            char sign = (char) new Random().nextInt(0, n);
+            char sign = (char) Utils.generateNumber(1, setOperation);
             questions[i] = generateRound(SIGNS[sign]);
         }
         Engine.run(questions, "What is the result of the expression?");
@@ -38,9 +38,10 @@ public class Calc {
     }
 }
 
-class Utils{
-    public static int generateNumber(int startNumber, int endNumber){
+class Utils {
+    public static int generateNumber(int startNumber, int endNumber) {
         return new Random().nextInt(startNumber, endNumber);
     }
+
 }
 
