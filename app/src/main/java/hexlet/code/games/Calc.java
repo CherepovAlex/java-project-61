@@ -8,7 +8,6 @@ public class Calc {
 
     public static final int LIMIT = 100;
     private static final char[] SIGNS = {'+', '-', '*'};
-    ;
 
     public static void game() {
         int capOperations = SIGNS.length;
