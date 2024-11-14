@@ -7,7 +7,7 @@ public class Engine {
     public static final int ROUNDS = 3;
 
     public static void run(String[][] rounds, String rules) {
-        String userName = Cli.helloMethod();
+        String userName = Cli.greetUser();
         System.out.println(rules);
         for (String[] round : rounds) {
             Scanner scanner = new Scanner(System.in);
@@ -24,6 +24,5 @@ public class Engine {
             }
         }
         System.out.println("Congratulations, " + userName + "!");
-
     }
 }

@@ -1,46 +1,38 @@
 package hexlet.code.games;
 
 import hexlet.code.Engine;
-
-import java.util.Random;
+import hexlet.code.Utils;
 
 public class Calc {
 
-    public static final int LIMIT = 100;
-    private static final char[] SIGNS = {'+', '-', '*'};
+    public static final int NUMBER_LIMIT = 100;
+    private static final char[] MATH_SIGNS = {'+', '-', '*'};
 
-    public static void game() {
-        int capOperations = SIGNS.length;
+    public static void run() {
+        int mathOperation = MATH_SIGNS.length;
         var questions = new String[Engine.ROUNDS][];
         for (int i = 0; i < Engine.ROUNDS; i++) {
-            char sign = (char) Utils.generateNumber(0, capOperations);
-            questions[i] = generateRound(SIGNS[sign]);
+            char sign = (char) Utils.generateNumber(0, mathOperation);
+            questions[i] = generateRound(MATH_SIGNS[sign]);
         }
         Engine.run(questions, "What is the result of the expression?");
     }
 
-    private static String[] generateRound(char sign) {
-        var number = 0;
-        var number1 = Utils.generateNumber(1, LIMIT);
-        var number2 = Utils.generateNumber(1, LIMIT);
-        number = calculate(number1, number2, sign);
-        String question = number1 + " " + sign + " " + number2;
-        return new String[]{question, Integer.toString(number)};
+    private static String[] generateRound(char mathSign) {
+        var result = 0;
+        var firstNumber = Utils.generateNumber(1, NUMBER_LIMIT);
+        var secondNumber = Utils.generateNumber(1, NUMBER_LIMIT);
+        result = calculate(firstNumber, secondNumber, mathSign);
+        String question = firstNumber + " " + mathSign + " " + secondNumber;
+        return new String[]{question, Integer.toString(result)};
     }
 
-    public static int calculate(int number1, int number2, char symbol) {
-        return switch (symbol) {
-            case '+' -> number1 + number2;
-            case '-' -> number1 - number2;
-            case '*' -> number1 * number2;
+    public static int calculate(int firstNumber, int secondNumber, char mathSign) {
+        return switch (mathSign) {
+            case '+' -> firstNumber + secondNumber;
+            case '-' -> firstNumber - secondNumber;
+            case '*' -> firstNumber * secondNumber;
             default -> throw new RuntimeException("unknown operation");
         };
     }
-}
-
-class Utils {
-    public static int generateNumber(int startNumber, int endNumber) {
-        return new Random().nextInt(startNumber, endNumber);
-    }
-
 }

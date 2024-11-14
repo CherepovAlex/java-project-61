@@ -26,22 +26,22 @@ public class App {
             case "0":
                 break;
             case "1":
-                Cli.helloMethod();
+                Cli.greetUser();
                 break;
             case "2":
-                Even.game();
+                Even.run();
                 break;
             case "3":
-                Calc.game();
+                Calc.run();
                 break;
             case "4":
-                GCD.game();
+                GCD.run();
                 break;
             case "5":
-                Progression.game();
+                Progression.run();
                 break;
             case "6":
-                Prime.game();
+                Prime.run();
                 break;
             default:
                 break;

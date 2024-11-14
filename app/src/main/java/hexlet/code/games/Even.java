@@ -1,12 +1,13 @@
 package hexlet.code.games;
 
 import hexlet.code.Engine;
+import hexlet.code.Utils;
 
 public class Even {
 
-    public static final int LIMIT = 100;
+    public static final int NUMBER_LIMIT = 100;
 
-    public static void game() {
+    public static void run() {
         var questions = new String[Engine.ROUNDS][];
         for (int i = 0; i < Engine.ROUNDS; i++) {
             questions[i] = generateRound();
@@ -15,16 +16,12 @@ public class Even {
     }
 
     private static String[] generateRound() {
-        var number = Utils.generateNumber(1, LIMIT);
-        var correctAnswer = isEven(number) ? "yes" : "no";
-        return new String[]{String.valueOf(number), correctAnswer};
+        var numberQuestion = Utils.generateNumber(1, NUMBER_LIMIT);
+        var correctAnswer = isEven(numberQuestion) ? "yes" : "no";
+        return new String[]{String.valueOf(numberQuestion), correctAnswer};
     }
 
-    private static boolean isEven(int number) {
-        if (number != 1) {
-            return number % 2 == 0;
-        } else {
-            return false;
-        }
+    private static boolean isEven(int numberQuestion) {
+        return numberQuestion % 2 == 0;
     }
 }

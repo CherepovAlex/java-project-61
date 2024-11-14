@@ -1,12 +1,13 @@
 package hexlet.code.games;
 
 import hexlet.code.Engine;
+import hexlet.code.Utils;
 
 public class GCD {
 
-    public static final int LIMIT = 100;
+    public static final int NUMBER_LIMIT = 100;
 
-    public static void game() {
+    public static void run() {
         var questions = new String[Engine.ROUNDS][];
         for (int i = 0; i < Engine.ROUNDS; i++) {
             questions[i] = generateRound();
@@ -15,10 +16,10 @@ public class GCD {
     }
 
     private static String[] generateRound() {
-        var number1 = Utils.generateNumber(1, LIMIT);
-        var number2 = Utils.generateNumber(1, LIMIT);
-        var correctAnswer = gcd(number1, number2);
-        return new String[]{number1 + " " + number2, String.valueOf(correctAnswer)};
+        var firstNumber = Utils.generateNumber(1, NUMBER_LIMIT);
+        var secondNumber = Utils.generateNumber(1, NUMBER_LIMIT);
+        var correctAnswer = gcd(firstNumber, secondNumber);
+        return new String[]{firstNumber + " " + secondNumber, String.valueOf(correctAnswer)};
     }
 
     private static int gcd(int number1, int number2) {
